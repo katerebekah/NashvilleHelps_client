@@ -48,11 +48,8 @@
             }
 
             $scope.submit = function(){
-                        console.log("eroi2 jk")
-                
                 clientService.addClient($scope.client).then(
                     function(res){
-                        console.log("CSuldhrugdhliug")
                         $scope.success = true;
                         success();
                     }, err);

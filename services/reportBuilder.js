@@ -57,7 +57,6 @@
 
 
         function findServiceTimes(referrals){
-            console.log(referrals)
             var times = {};
             var today = new Date();
             var month = today.getMonth();
@@ -137,7 +136,6 @@
                 v.times = findServiceTimes(generateAgencyTotals(v));
                 return v;
             });
-                console.log(agenciesArr)
                 return agenciesArr;
         }
         

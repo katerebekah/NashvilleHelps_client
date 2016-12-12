@@ -14,7 +14,6 @@
             accountService.login(form)
                 .then(
                     function(res){
-                        console.log(res);
                         $location.path("/account");
                     }, err
                 )
