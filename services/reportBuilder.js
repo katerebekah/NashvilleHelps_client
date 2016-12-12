@@ -210,7 +210,7 @@
                     dateRequested: new Date(v.requested).toDateString()
                 };
                 if (v.address) {
-                    refwerral.postal = client.address.postal;
+                    referral.postal = client.address.postal;
                 }
                 return referral;
             });
