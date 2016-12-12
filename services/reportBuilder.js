@@ -201,7 +201,6 @@
             return client.referrals.map(function(v){
                 var referral = {
                     name: client.name,
-                    postal: client.address.postal,
                     service: {
                         name: v.service_name,
                         _id: v.service
@@ -210,6 +209,9 @@
                     agency: getAgency(v.agency),
                     dateRequested: new Date(v.requested).toDateString()
                 };
+                if (v.address) {
+                    refwerral.postal = client.address.postal;
+                }
                 return referral;
             });
         }
