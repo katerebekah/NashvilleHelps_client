@@ -27,11 +27,13 @@
                 .then(
                     function(res){
                         $scope.agency.name = res.name;
-                        $scope.agency.street1 = res.address.street1;
-                        $scope.agency.street2 = res.address.street2;
-                        $scope.agency.city = res.address.city;
-                        $scope.agency.state = res.address.state;
-                        $scope.agency.postal = res.address.postal;
+                        if (res.address){
+                            $scope.agency.street1 = res.address.street1;
+                            $scope.agency.street2 = res.address.street2;
+                            $scope.agency.city = res.address.city;
+                            $scope.agency.state = res.address.state;
+                            $scope.agency.postal = res.address.postal;
+                        }
                         $scope.agency.phone = res.phone;
                         $scope.agency.agency_id = res._id;
                         populateServices(res.services);
