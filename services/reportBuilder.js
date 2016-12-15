@@ -50,9 +50,12 @@
         //SERVICES
 
         function findServiceFulfilledTotal(referrals){
+            if (referrals){
             return referrals.filter(function(v){
                     return v.fulfilled
                 }).length
+            }
+            return 0;
         }
 
 
