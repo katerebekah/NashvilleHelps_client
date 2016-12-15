@@ -58,16 +58,18 @@
 
         function findServiceTimes(referrals){
             var times = {};
-            var today = new Date();
-            var month = today.getMonth();
-            var year = today.getFullYear(); 
-            var quarter = Math.floor(month/4);
-            var quarterMonths = [0,3,6,9];
+            if (referrals){               
+                var today = new Date();
+                var month = today.getMonth();
+                var year = today.getFullYear(); 
+                var quarter = Math.floor(month/4);
+                var quarterMonths = [0,3,6,9];
 
-            times.thisMonth = getForDays(new Date(year, month), referrals);
-            times.thisQuarter = getForDays(new Date(year, quarterMonths[quarter]), referrals);
-            times.thisYear = getForDays(new Date(year, 0), referrals);
-            times.allTime = referrals;
+                times.thisMonth = getForDays(new Date(year, month), referrals);
+                times.thisQuarter = getForDays(new Date(year, quarterMonths[quarter]), referrals);
+                times.thisYear = getForDays(new Date(year, 0), referrals);
+                times.allTime = referrals;
+            }
             return times;
         }
 
