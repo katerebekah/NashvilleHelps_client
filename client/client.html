@@ -8,7 +8,7 @@
 	<div ng-hide="success">
 		<form id="clientForm" class="col s12">
 			<div class="section">
-				<h4>What is your name?</h4>
+				<h4>What is your name? (*)</h4>
 				<div class="row">
 					<div class="input-field col s6">
 						<input required id="first_name" type="text" ng-model="client.first_name" class="validate">
@@ -39,7 +39,7 @@
 				</div>
 			</div>
 			<div class="section">
-				<h4>What is your address?</h4>
+				<h4>What is your address? (*)</h4>
 				<div class="row">
 					<div class="input-field col s12">
 						<input type="text" id="streetAddress" ng-model="client.street1" class="validate">
@@ -63,14 +63,13 @@
 					</div>
 					<div class="input-field col s4">
 						<input type="text" id="zipCode" ng-model="client.postal" class="validate">
-						<label for="zipCode">Zip Code</label>
+						<label for="zipCode">Zip Code (*)</label>
 					</div>
 				</div>
 			</div>
 			<div class="section">
 				<h4>Any additional contact info?</h4>
-				<p>Please provide a way to contact you if you did not provide a phone number, email address, or physical address. If you
-					would like someone to communicate in English on your behalf, please provide their name, phone number, and address here.
+				<p>Please provide a way to contact you if you did not provide a phone number, email address, or physical address. If you would like someone to communicate in English on your behalf, please provide their contact information here.
 					Any notes about best method and time to contact you should go here, too.</p>
 				<div class="row">
 					<div class="input-field col12">
@@ -92,7 +91,7 @@
 				</div>
 			</div>
 			<div class="section">
-				<h4>What types of services do you need?</h4>
+				<h4>What types of services do you need? (*)</h4>
 				<div class="row">
 					<ul ng-repeat="category in categories track by $index" class="collection with-header">
 						<li class="collection-header">
@@ -107,7 +106,7 @@
 					<br>
 				</div>
 				<div class="row">
-					<h4>Consent</h4>
+					<h4>Consent (*)</h4>
 					<p>I consent to the above information being sent to Nashville Helps organizations. I understand that the information in
 						this form will be kept private. I also understand that sharing this information is voluntary, and that I may withdraw
 						my permission to share information at any time, through written request to NashvilleHelps@gmail.com, or by contacting
