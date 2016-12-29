@@ -60,7 +60,7 @@
             
         function success(){
             $scope.message = {
-                body: "Thanks for submitting your information! Someone will contact you from one of our partner organizations soon with details on how they can help. To request more information about Nashville Helps, please contact NashvilleHelps@gmail.com, or Megan Godbey at (615) 880-2264 or Megan.Godbey@nashville.gov",
+                body: "Thanks for submitting your information! Someone will contact you from an organization soon. To request more information about Nashville Helps, please contact NashvilleHelps@gmail.com, or Megan Godbey at (615) 880-2264 or Megan.Godbey@nashville.gov",
                 title: "Success",
                 error: false
             }
