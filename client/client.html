@@ -95,10 +95,10 @@
 				<div class="row">
 					<ul ng-repeat="category in categories track by $index" class="collection with-header">
 						<li class="collection-header">
-							{{category}}
+							<h5>{{category}}</h5>
 						</li>
 						<li class="collection-item" ng-repeat="service in services | filter: {category: category}" ng-class="{'active': isActive(service) }" ng-click="toggleService(service)" >
-							<h5>{{service.name}}<a class="secondary-content"><i class="material-icons">add</i></a></h5>
+							{{service.name}}<a class="secondary-content"><i class="material-icons">add</i></a>
 						</li>
 					</ul>
 					<br>
