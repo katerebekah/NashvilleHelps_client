@@ -2,9 +2,9 @@
     angular.module('nashhelps')
         .controller('clientController', clientController);
 
-        clientController.$inject = ['$scope', 'clientService', 'servicesService', '$timeout'];
+        clientController.$inject = ['$scope', 'clientService', 'servicesService'];
 
-        function clientController($scope, clientService, servicesService, $timeout){
+        function clientController($scope, clientService, servicesService){
             
             $scope.client = {
                 services: []
@@ -64,9 +64,6 @@
                 title: "Success",
                 error: false
             }
-            $timeout(function(){
-                $scope.message = null;
-            }, 5000);
         }
         
         function err(err){
@@ -75,9 +72,6 @@
                 title: "An error has occurred",
                 error: true
             }
-            $timeout(function(){
-                $scope.message = null;
-            }, 5000);
         }
-        }
+    }
 })();
